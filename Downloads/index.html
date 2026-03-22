@@ -629,9 +629,42 @@
       #programs { padding: 5rem 1.5rem; }
       .programs-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
       .programs-grid { grid-template-columns: 1fr; }
-      #schedule { padding: 5rem 1.5rem; }
-      .schedule-grid { grid-template-columns: 1fr 1fr; }
-      .day-col:last-child { grid-column: span 2; }
+      #schedule { padding: 4rem 1.5rem; }
+      .schedule-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+        background: rgba(255,255,255,0.08);
+      }
+      .day-col {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+      }
+      .day-header {
+        width: 70px;
+        min-width: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        padding: 0.8rem;
+      }
+      .day-col-slots {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        flex: 1;
+        gap: 1px;
+        background: rgba(255,255,255,0.08);
+      }
+      .class-slot {
+        flex: 1;
+        min-width: 0;
+        border-bottom: none;
+        border-left: none;
+      }
+      .day-col:last-child { grid-column: unset; }
       #location { padding: 5rem 1.5rem; }
       .location-inner { grid-template-columns: 1fr; gap: 3rem; }
       #cta { padding: 6rem 1.5rem; }
@@ -945,47 +978,57 @@
     <div class="schedule-grid">
       <div class="day-col">
         <div class="day-header">Mon</div>
-        <div class="class-slot">
-          <div class="class-time">19:00</div>
-          <div class="class-name">No-Gi</div>
-          <div class="class-type">All Levels</div>
+        <div class="day-col-slots">
+          <div class="class-slot">
+            <div class="class-time">19:00</div>
+            <div class="class-name">No-Gi</div>
+            <div class="class-type">All Levels</div>
+          </div>
         </div>
       </div>
       <div class="day-col">
         <div class="day-header">Tue</div>
-        <div class="class-slot">
-          <div class="class-time">18:15</div>
-          <div class="class-name">Kids Classes</div>
-          <div class="class-type">Kids</div>
-        </div>
-        <div class="class-slot">
-          <div class="class-time">19:00</div>
-          <div class="class-name">No-Gi</div>
-          <div class="class-type">All Levels</div>
+        <div class="day-col-slots">
+          <div class="class-slot">
+            <div class="class-time">18:15</div>
+            <div class="class-name">Kids Classes</div>
+            <div class="class-type">Kids</div>
+          </div>
+          <div class="class-slot">
+            <div class="class-time">19:00</div>
+            <div class="class-name">No-Gi</div>
+            <div class="class-type">All Levels</div>
+          </div>
         </div>
       </div>
       <div class="day-col">
         <div class="day-header">Wed</div>
-        <div class="class-slot">
-          <div class="class-time">19:00</div>
-          <div class="class-name">No-Gi</div>
-          <div class="class-type">All Levels</div>
+        <div class="day-col-slots">
+          <div class="class-slot">
+            <div class="class-time">19:00</div>
+            <div class="class-name">No-Gi</div>
+            <div class="class-type">All Levels</div>
+          </div>
         </div>
       </div>
       <div class="day-col">
         <div class="day-header">Thu</div>
-        <div class="class-slot">
-          <div class="class-time">19:00</div>
-          <div class="class-name">No-Gi</div>
-          <div class="class-type">All Levels</div>
+        <div class="day-col-slots">
+          <div class="class-slot">
+            <div class="class-time">19:00</div>
+            <div class="class-name">No-Gi</div>
+            <div class="class-type">All Levels</div>
+          </div>
         </div>
       </div>
       <div class="day-col">
         <div class="day-header">Fri</div>
-        <div class="class-slot">
-          <div class="class-time">19:00</div>
-          <div class="class-name">Open Mat</div>
-          <div class="class-type">Sparring Day</div>
+        <div class="day-col-slots">
+          <div class="class-slot">
+            <div class="class-time">19:00</div>
+            <div class="class-name">Open Mat</div>
+            <div class="class-type">Sparring Day</div>
+          </div>
         </div>
       </div>
     </div>
