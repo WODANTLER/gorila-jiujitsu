@@ -859,12 +859,14 @@
       }
       .scroll-indicator { display: none; }
 
-      /* Gorilla face - position to fill right side */
+      /* Gorilla face - centered in hero on mobile */
       .gorilla-silhouette {
-        width: 85vw;
-        right: -8%;
-        bottom: 10%;
-        opacity: 0.065;
+        width: 90vw;
+        right: 50%;
+        transform: translateX(50%);
+        bottom: auto;
+        top: 12%;
+        opacity: 0.07;
       }
 
       /* About */
@@ -875,7 +877,18 @@
 
       /* Programs */
       #programs { padding: 3.5rem 1.5rem; }
-      .program-card { padding: 1.8rem 1.5rem; }
+      #programs h2 {
+        font-size: clamp(2.5rem, 10vw, 3.5rem);
+        text-align: center;
+        display: block;
+        width: 100%;
+      }
+      .underline-gold {
+        border-bottom-width: 1px;
+        padding-bottom: 0.3rem;
+      }
+      .programs-inner { text-align: center; }
+      .program-card { padding: 1.8rem 1.5rem; text-align: left; }
       .program-card h3 { font-size: 1.5rem; }
       .program-card p { font-size: 0.85rem; }
 
