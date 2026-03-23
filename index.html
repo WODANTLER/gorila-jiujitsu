@@ -1030,4 +1030,20 @@
 
   <!-- FOOTER -->
   <footer>
-    <span class="foot
+    <span class="footer-text">© 2025 Gorila Jiu Jitsu · Mallorca</span>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      var hamburger = document.getElementById('hamburger');
+      var drawer = document.getElementById('navDrawer');
+      var overlay = document.getElementById('navOverlay');
+      hamburger.classList.toggle('open');
+      drawer.classList.toggle('open');
+      overlay.classList.toggle('open');
+      document.body.style.overflow = drawer.classList.contains('open') ? 'hidden' : '';
+    }
+  </script>
+
+</body>
+</html>
